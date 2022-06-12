@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .block {
+            background-color: pink;
+        }
+
+        .inline1 {
+            background-color: cadetblue;
+             height: 100rem;  /* height and width wont change for inline elements */
+        }
+
+        .inline2 {
+            background-color: lightgreen; 
+        }
+
+        .inline-block {
+            background-color: coral;
+            display: inline-block;
+            height: 10rem; /* Inline block elements can change height and width*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="block">I am a block element</div>
+    <span class="inline1">I am an inline element</span>
+    <span class="inline2">I am an inline element</span>
+    <!-- Div will start from new line even if space is available after span -->
+    <div class="block">I am a block element</div> 
+    <span class="inline-block">I am an inline block element</span>
+</body>
+</html>

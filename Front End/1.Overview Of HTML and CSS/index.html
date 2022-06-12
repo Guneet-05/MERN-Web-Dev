@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to HTML</title>
+        <style>
+            h1 {
+                color: lightblue;
+            }
+            p{
+                background-color: lightpink;
+            }
+            #unique {
+                color: brown;
+            }
+            .common {
+                text-decoration: underline;
+            }
+            /* space is for descendant selectors */
+
+            /* space diya hai so, kitni bhi depth me hoga p, vo style ho jaega. 
+            Zaroori nahi ki immediate depth me ho */
+            .common p{
+                background-color: lightgreen;
+            }
+
+            
+            /* This targets only the immediately children */
+            .common > p {
+                color: brown;
+            }
+
+            /* class common k same level vale immediate sibling ko target */
+            .common + div {
+                color: red;
+            }
+
+            .common ~ div {
+                color: coral;
+            }
+
+            /* Attribute selectors */
+
+            label[for] {
+                color: pink;
+            }
+
+            label[for = "name"] {
+                background-color: aquamarine;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- to understand attribute selectors -->
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" name="" id="name">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <label for="pass">password</label>
+            <input type="password" name="" id="pass">
+            <label for="no">Phone No</label>
+            <input type="number" name="" id="no">
+        </form>
+
+        <!-- Question to understand combinator selectors -->
+        <div class="common">
+            <div class="something1">Something</div>
+            <div class="something2">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, blanditiis pariatur! Praesentium excepturi iure necessitatibus dolorem voluptates aliquid! Esse minima consectetur voluptate saepe debitis magnam quasi fugit reprehenderit facere est?
+                </p>
+            </div>
+            <div class="sonething3">Something</div>
+            <p>Aur bhai kya haal</p>
+        </div>
+
+        <div class="sib">I am sibling</div>
+
+        <h1>Hello Everyone</h1>
+        <h2 id="unique">Hello Everyone</h2>
+        <h3>Hello Everyone</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo modi, temporibus culpa eos libero magnam excepturi suscipit dolores? Accusantium inventore recusandae aliquam quas exercitationem, corporis ratione quos iusto aspernatur deserunt.</p>
+
+        <!-- anchor tag -->
+        <a href="https://www.google.com">Go to Google</a>
+       
+       <!-- a div is used to arrange contents inside it -->
+        <div class="common"> 
+            Hello
+            <p>Guneet Malhotra</p>
+        </div>
+
+        <div class="common">
+            Hello
+        </div>
+
+        <!-- list -->
+
+        <!-- unordered list -->
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+
+        <!-- ordered list -->
+        <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ol>
+
+        <span>Content Filling Tag</span>
+         <br>
+        <img src="./spiderman wp.png" alt="Image display error" width="1000px">
+    
+
+        <!-- ID is unique for every element -->
+        <!-- Class can be common for multiple elements -->
+
+    </body>
+</html>
