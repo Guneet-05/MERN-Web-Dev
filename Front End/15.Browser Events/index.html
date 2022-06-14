@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+
+        .pink {
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: pink;
+            padding-top: 20px;
+        }
+
+        .blue {
+            width: auto;
+            height: 200px;
+            margin: 50px 50px 0 50px;
+            background-color: skyblue;
+            padding-top: 20px;
+        }
+
+        .yellow {
+            width: auto;
+            height: 100px;
+            padding-top: 20px;
+            background-color: yellow;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="pink">
+        <div class="blue">
+            <div class="yellow">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let pink = document.querySelector(".pink");
+        let blue = document.querySelector(".blue");
+        let yellow = document.querySelector(".yellow");
+
+
+        // pink.addEventListener("click",callBack,true); 
+        // True means that now triggering will take place during capturing and not bubbling
+        //we don't often write false as it is by default.
+
+        pink.addEventListener("click",function(e){
+            alert("pink is clicked");
+            
+        })
+
+        blue.addEventListener("click",function(e){
+            alert("blue 1 is clicked");
+            e.stopImmediatePropagation();
+        })
+
+        blue.addEventListener("click",function(e){
+            alert("blue 2 is clicked");
+            // e.stopPropagation();
+        })
+
+        yellow.addEventListener("click",function(e){
+            alert("yellow is clicked");
+        })
+    </script>
+
+</body>
+</html>
